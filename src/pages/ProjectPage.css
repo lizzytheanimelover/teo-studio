@@ -1,0 +1,861 @@
+/* ==================================================
+   PROJECT PAGE
+================================================== */
+
+.project-page {
+  width: 100%;
+  min-height: 100vh;
+
+  background: #f5f4ef;
+  color: #111111;
+}
+
+.project-page-inner {
+  width: min(1400px, 90vw);
+  margin: 0 auto;
+  padding: 3rem 0 8rem;
+}
+
+/* ==================================================
+   BACK LINK
+================================================== */
+
+.project-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  color: #111111;
+  text-decoration: none;
+
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.project-back-link:hover {
+  opacity: 0.55;
+  transform: translateX(-3px);
+}
+
+/* ==================================================
+   PROJECT HERO
+================================================== */
+
+.project-hero {
+  padding: 7rem 0 5rem;
+}
+
+.project-hero-meta {
+  margin-bottom: 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.section-eyebrow {
+  margin: 0;
+
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+
+  opacity: 0.45;
+}
+
+.project-year {
+  margin: 0;
+
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+
+  opacity: 0.45;
+}
+
+.project-hero h1 {
+  max-width: 1200px;
+  margin: 0;
+
+  font-size: clamp(4rem, 9vw, 9rem);
+  line-height: 0.88;
+  letter-spacing: -0.08em;
+  font-weight: 500;
+}
+
+.project-hero-bottom {
+  margin-top: 3.5rem;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.project-hero-description {
+  max-width: 600px;
+  margin: 0;
+
+  font-size: 1rem;
+  line-height: 1.75;
+
+  opacity: 0.6;
+}
+
+.project-hero-link {
+  flex-shrink: 0;
+}
+
+/* ==================================================
+   EXTERNAL LINK
+================================================== */
+
+.project-external-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+
+  color: #111111;
+  text-decoration: none;
+
+  font-size: 0.8rem;
+  font-weight: 600;
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.project-external-link span {
+  transition: transform 0.2s ease;
+}
+
+.project-external-link:hover {
+  opacity: 0.55;
+}
+
+.project-external-link:hover span {
+  transform: translate(3px, -3px);
+}
+
+/* ==================================================
+   MAIN PROJECT PREVIEW
+================================================== */
+
+/*
+   IMPORTANT:
+
+   The image uses its natural aspect ratio.
+   We do NOT force a fixed height on the image.
+   object-fit: contain prevents cropping.
+*/
+
+.project-main-preview {
+  position: relative;
+
+  width: 100%;
+  min-height: 600px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background: #101b35;
+  border-radius: 2px;
+}
+
+.project-main-preview .project-image {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  max-width: 100%;
+  max-height: none;
+
+  min-height: 0;
+
+  object-fit: contain;
+
+  flex-shrink: 0;
+
+  transition: transform 0.5s ease;
+}
+
+/* ==================================================
+   PROJECT IMAGE
+================================================== */
+
+.project-image {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  max-width: 100%;
+
+  object-fit: contain;
+}
+
+/* ==================================================
+   PROJECT DETAIL PLACEHOLDER
+================================================== */
+
+.project-detail-placeholder {
+  width: 100%;
+  min-height: 600px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #e8e7e1;
+
+  color: rgba(17, 17, 17, 0.4);
+}
+
+.project-detail-placeholder > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+}
+
+.placeholder-number {
+  font-size: 3rem;
+  font-weight: 400;
+  letter-spacing: -0.05em;
+}
+
+/* ==================================================
+   PROJECT DETAILS
+================================================== */
+
+.project-details {
+  padding: 10rem 0;
+
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 8vw;
+
+  border-bottom: 1px solid rgba(17, 17, 17, 0.15);
+}
+
+.project-detail-intro {
+  min-width: 0;
+}
+
+.project-detail-intro h2 {
+  max-width: 850px;
+  margin: 2rem 0 0;
+
+  font-size: clamp(2.5rem, 4.5vw, 5rem);
+  line-height: 0.98;
+  letter-spacing: -0.065em;
+  font-weight: 500;
+}
+
+.project-detail-copy {
+  padding-top: 3.5rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.project-copy-block {
+  max-width: 650px;
+}
+
+.project-copy-label {
+  margin: 0 0 1.2rem;
+
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+
+  opacity: 0.4;
+}
+
+.project-copy-block > p:last-child {
+  margin: 0;
+
+  font-size: 1rem;
+  line-height: 1.8;
+
+  opacity: 0.6;
+}
+
+/* ==================================================
+   PROJECT META
+================================================== */
+
+.project-meta-section {
+  padding: 5rem 0;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6vw;
+
+  border-bottom: 1px solid rgba(17, 17, 17, 0.15);
+}
+
+.project-meta-block {
+  min-width: 0;
+}
+
+.project-tag-list {
+  margin-top: 1.5rem;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.project-tag {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 0.7rem 0.9rem;
+
+  border: 1px solid rgba(17, 17, 17, 0.18);
+
+  font-size: 0.72rem;
+  line-height: 1.2;
+
+  opacity: 0.75;
+}
+
+/* ==================================================
+   PROJECT GALLERY
+================================================== */
+
+.project-gallery {
+  padding: 8rem 0;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.project-gallery-item {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background: #e8e7e1;
+}
+
+.project-gallery-item:nth-child(1) {
+  grid-column: span 2;
+}
+
+.project-gallery-item .project-image {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  max-width: 100%;
+
+  object-fit: contain;
+}
+
+/* ==================================================
+   LIVE PROJECT
+================================================== */
+
+.project-live-section {
+  padding: 7rem 0;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 4rem;
+
+  border-top: 1px solid rgba(17, 17, 17, 0.15);
+  border-bottom: 1px solid rgba(17, 17, 17, 0.15);
+}
+
+.project-live-section h2 {
+  max-width: 750px;
+  margin: 1.5rem 0 0;
+
+  font-size: clamp(3rem, 6vw, 6rem);
+  line-height: 0.92;
+  letter-spacing: -0.07em;
+  font-weight: 500;
+}
+
+.project-live-section h2 span {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.project-live-section .contact-button {
+  flex-shrink: 0;
+  margin-top: 0;
+}
+
+/* ==================================================
+   PROJECT NAVIGATION
+================================================== */
+
+.project-navigation {
+  padding: 9rem 0 0;
+}
+
+.project-navigation-heading {
+  margin-bottom: 4rem;
+}
+
+.project-navigation-heading h2 {
+  margin: 1.5rem 0 0;
+
+  font-size: clamp(3rem, 6vw, 6rem);
+  line-height: 0.92;
+  letter-spacing: -0.07em;
+  font-weight: 500;
+}
+
+.project-navigation-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+
+  background: rgba(17, 17, 17, 0.15);
+  border-top: 1px solid rgba(17, 17, 17, 0.15);
+  border-bottom: 1px solid rgba(17, 17, 17, 0.15);
+}
+
+.project-nav-card,
+.project-nav-empty {
+  min-height: 330px;
+  padding: 2.5rem;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #f5f4ef;
+
+  text-decoration: none;
+  color: #111111;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+.project-nav-card:hover {
+  background: #111111;
+  color: #ffffff;
+}
+
+.project-nav-direction {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+
+  opacity: 0.5;
+
+  transition: opacity 0.3s ease;
+}
+
+.project-nav-card:hover .project-nav-direction {
+  opacity: 0.65;
+}
+
+.project-nav-number {
+  margin-top: auto;
+
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+
+  opacity: 0.4;
+}
+
+.project-nav-card h3 {
+  max-width: 550px;
+  margin: 0.7rem 0 0;
+
+  font-size: clamp(2rem, 3.5vw, 3.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.055em;
+  font-weight: 500;
+}
+
+.project-nav-category {
+  margin-top: 0.8rem;
+
+  font-size: 0.75rem;
+
+  opacity: 0.45;
+}
+
+.project-nav-empty {
+  justify-content: flex-end;
+
+  color: rgba(17, 17, 17, 0.35);
+
+  font-size: 0.75rem;
+}
+
+.project-nav-empty span {
+  display: block;
+}
+
+/* ==================================================
+   FINAL BACK LINK
+================================================== */
+
+.project-final-link {
+  padding: 5rem 0 0;
+
+  display: flex;
+  justify-content: center;
+}
+
+.project-final-link .project-back-link {
+  font-size: 0.8rem;
+}
+
+/* ==================================================
+   PROJECT NOT FOUND
+================================================== */
+
+.project-not-found {
+  min-height: 70vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.project-not-found h1 {
+  margin: 1.5rem 0 0;
+
+  font-size: clamp(3rem, 7vw, 7rem);
+  line-height: 0.9;
+  letter-spacing: -0.075em;
+  font-weight: 500;
+}
+
+.project-not-found > p:not(.section-eyebrow) {
+  max-width: 500px;
+  margin: 2rem 0 2.5rem;
+
+  font-size: 0.95rem;
+  line-height: 1.7;
+
+  opacity: 0.55;
+}
+
+/* ==================================================
+   PROJECT PAGE — TABLET
+================================================== */
+
+@media (max-width: 900px) {
+  .project-page-inner {
+    width: min(90vw, 760px);
+  }
+
+  .project-hero {
+    padding: 5rem 0 4rem;
+  }
+
+  .project-hero h1 {
+    font-size: clamp(3.5rem, 10vw, 6rem);
+  }
+
+  .project-hero-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  /*
+     Keep the image at its natural aspect ratio.
+     Do not give it a fixed height.
+  */
+
+  .project-main-preview {
+    min-height: 0;
+  }
+
+  .project-main-preview .project-image {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    max-width: 100%;
+    object-fit: contain;
+  }
+
+  .project-details {
+    padding: 7rem 0;
+
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .project-detail-copy {
+    padding-top: 0;
+  }
+
+  .project-meta-section {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .project-gallery {
+    padding: 6rem 0;
+  }
+
+  .project-live-section {
+    padding: 6rem 0;
+
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .project-navigation {
+    padding-top: 7rem;
+  }
+
+  .project-nav-card,
+  .project-nav-empty {
+    min-height: 280px;
+    padding: 2rem;
+  }
+}
+
+/* ==================================================
+   PROJECT PAGE — MOBILE
+================================================== */
+
+@media (max-width: 700px) {
+  .project-page-inner {
+    width: calc(100% - 12vw);
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+  }
+
+  .project-hero {
+    padding: 4rem 0 3rem;
+  }
+
+  .project-hero-meta {
+    margin-bottom: 1.5rem;
+  }
+
+  .project-hero h1 {
+    font-size: clamp(3rem, 14vw, 5rem);
+  }
+
+  .project-hero-bottom {
+    margin-top: 2.5rem;
+  }
+
+  .project-hero-description {
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+
+  /*
+     MAIN IMAGE:
+
+     The screenshot is allowed to determine its own height.
+     This prevents vertical cropping on long website screenshots.
+  */
+
+  .project-main-preview {
+    min-height: 0;
+    height: auto;
+
+    display: block;
+  }
+
+  .project-main-preview .project-image {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    max-width: 100%;
+    min-height: 0;
+
+    object-fit: contain;
+  }
+
+  .project-detail-placeholder {
+    min-height: 350px;
+  }
+
+  .project-details {
+    padding: 5rem 0;
+  }
+
+  .project-detail-intro h2 {
+    font-size: clamp(2.3rem, 10vw, 3.5rem);
+  }
+
+  .project-detail-copy {
+    gap: 3rem;
+  }
+
+  .project-copy-block > p:last-child {
+    font-size: 0.9rem;
+    line-height: 1.75;
+  }
+
+  .project-meta-section {
+    padding: 4rem 0;
+    gap: 3rem;
+  }
+
+  .project-tag-list {
+    gap: 0.5rem;
+  }
+
+  .project-tag {
+    padding: 0.6rem 0.75rem;
+    font-size: 0.68rem;
+  }
+
+  .project-gallery {
+    padding: 4rem 0;
+
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .project-gallery-item:nth-child(1) {
+    grid-column: span 1;
+  }
+
+  .project-gallery-item .project-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .project-live-section {
+    padding: 5rem 0;
+    gap: 2.5rem;
+  }
+
+  .project-live-section h2 {
+    font-size: clamp(2.8rem, 12vw, 4.5rem);
+  }
+
+  .project-live-section .contact-button {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .project-navigation {
+    padding-top: 5rem;
+  }
+
+  .project-navigation-heading {
+    margin-bottom: 3rem;
+  }
+
+  .project-navigation-heading h2 {
+    font-size: clamp(2.8rem, 12vw, 4.5rem);
+  }
+
+  .project-navigation-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-nav-card,
+  .project-nav-empty {
+    min-height: 260px;
+    padding: 1.75rem;
+  }
+
+  .project-nav-card h3 {
+    font-size: clamp(2rem, 9vw, 3rem);
+  }
+
+  .project-final-link {
+    padding-top: 4rem;
+  }
+}
+
+/* ==================================================
+   PROJECT PAGE — SMALL MOBILE
+================================================== */
+
+@media (max-width: 480px) {
+  .project-page-inner {
+    width: calc(100% - 10vw);
+  }
+
+  .project-hero {
+    padding-top: 3.5rem;
+  }
+
+  .project-hero h1 {
+    font-size: clamp(2.7rem, 15vw, 4rem);
+  }
+
+  .project-hero-meta {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .project-main-preview {
+    border-radius: 0;
+  }
+
+  .project-details {
+    padding: 4rem 0;
+  }
+
+  .project-detail-intro h2 {
+    font-size: 2.2rem;
+  }
+
+  .project-meta-section {
+    padding: 3.5rem 0;
+  }
+
+  .project-gallery {
+    padding: 3.5rem 0;
+  }
+
+  .project-live-section {
+    padding: 4rem 0;
+  }
+
+  .project-navigation {
+    padding-top: 4rem;
+  }
+
+  .project-nav-card,
+  .project-nav-empty {
+    min-height: 230px;
+    padding: 1.5rem;
+  }
+}
