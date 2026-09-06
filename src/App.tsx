@@ -447,17 +447,13 @@ function HomePage() {
               <label>
                 <span>Budget</span>
 
-               <select
+             <select
   name="budget"
   required
   defaultValue=""
 >
   <option value="" disabled>
     Select a budget range
-  </option>
-
-  <option value="Under S$600">
-    Under S$600
   </option>
 
   <option value="S$600 – S$1,000">
