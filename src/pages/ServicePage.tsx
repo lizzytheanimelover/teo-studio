@@ -387,7 +387,7 @@ function ServicePage() {
           <Link to="/#contact">Contact</Link>
         </div>
 
-        <a href="mailto:hello@teostudio.com" className="nav-cta">
+        <a href="mailto:elizabethakorah88@gmail.com" className="nav-cta">
           Start a project
         </a>
       </nav>
@@ -641,7 +641,7 @@ function ServicePage() {
           </p>
 
           <a
-            href="mailto:hello@teostudio.com"
+            href="mailto:elizabethakorah88@gmail.com"
             className="contact-button"
           >
             Start a project
