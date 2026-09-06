@@ -447,39 +447,39 @@ function HomePage() {
               <label>
                 <span>Budget</span>
 
-                <select
-                  name="budget"
-                  required
-                  defaultValue=""
-                >
-                  <option value="" disabled>
-                    Select a budget range
-                  </option>
+               <select
+  name="budget"
+  required
+  defaultValue=""
+>
+  <option value="" disabled>
+    Select a budget range
+  </option>
 
-                  <option value="Under $500">
-                    Under $500
-                  </option>
+  <option value="Under S$600">
+    Under S$600
+  </option>
 
-                  <option value="$500 – $1,000">
-                    $500 – $1,000
-                  </option>
+  <option value="S$600 – S$1,000">
+    S$600 – S$1,000
+  </option>
 
-                  <option value="$1,000 – $2,500">
-                    $1,000 – $2,500
-                  </option>
+  <option value="S$1,000 – S$1,800">
+    S$1,000 – S$1,800
+  </option>
 
-                  <option value="$2,500 – $5,000">
-                    $2,500 – $5,000
-                  </option>
+  <option value="S$1,800 – S$3,000">
+    S$1,800 – S$3,000
+  </option>
 
-                  <option value="$5,000+">
-                    $5,000+
-                  </option>
+  <option value="S$3,000+">
+    S$3,000+
+  </option>
 
-                  <option value="Not sure yet">
-                    Not sure yet
-                  </option>
-                </select>
+  <option value="Not sure yet">
+    Not sure yet
+  </option>
+</select>
               </label>
 
               <label>
