@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { projects } from "../data/projects";
 import "./ServicePage.css";
@@ -326,6 +327,8 @@ const services: Record<ServiceKey, ServiceData> = {
 function ServicePage() {
   const { service } = useParams();
 
+  const [showEmailOptions, setShowEmailOptions] = useState(false);
+
   const serviceData = services[service as ServiceKey];
 
   /* ==================================================
@@ -387,9 +390,13 @@ function ServicePage() {
           <Link to="/#contact">Contact</Link>
         </div>
 
-        <a href="mailto:elizabethakorah88@gmail.com" className="nav-cta">
+        <button
+          type="button"
+          className="nav-cta"
+          onClick={() => setShowEmailOptions(true)}
+        >
           Start a project
-        </a>
+        </button>
       </nav>
 
       <main>
@@ -640,15 +647,71 @@ function ServicePage() {
             the best way to bring it online.
           </p>
 
-          <a
-            href="mailto:elizabethakorah88@gmail.com"
+          <button
+            type="button"
             className="contact-button"
+            onClick={() => setShowEmailOptions(true)}
           >
             Start a project
             <span>↗</span>
-          </a>
+          </button>
         </section>
       </main>
+
+      {/* ==================================================
+          EMAIL OPTIONS MODAL
+      ================================================== */}
+
+      {showEmailOptions && (
+        <div
+          className="email-options-overlay"
+          onClick={() => setShowEmailOptions(false)}
+        >
+          <div
+            className="email-options-modal"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <button
+              type="button"
+              className="email-options-close"
+              onClick={() => setShowEmailOptions(false)}
+              aria-label="Close"
+            >
+              ×
+            </button>
+
+            <p className="eyebrow">CONTACT TEO STUDIO</p>
+
+            <h3>Choose your email</h3>
+
+            <p>
+              How would you like to send your enquiry?
+            </p>
+
+            <div className="email-options-buttons">
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=elizabethakorah88@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setShowEmailOptions(false)}
+              >
+                <span>Gmail</span>
+                <span>↗</span>
+              </a>
+
+              <a
+                href="https://outlook.live.com/mail/0/deeplink/compose?to=elizabethakorah88@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setShowEmailOptions(false)}
+              >
+                <span>Outlook</span>
+                <span>↗</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* ==================================================
           FOOTER
