@@ -4,7 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import { projects } from "../data/projects";
 
 import "../App.css";
-import "./ProjectPage.css";
+
 
 
 export default function ProjectPage() {
