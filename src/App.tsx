@@ -5,6 +5,8 @@ import "./App.css";
 import { projects } from "./data/projects";
 import ProjectPage from "./pages/ProjectPage";
 import ServicePage from "./pages/ServicePage";
+import { Analytics } from "@vercel/analytics/react";
+
 
 function HomePage() {
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -633,25 +635,28 @@ function HomePage() {
     </div>
   );
 }
-
 function App() {
   return (
-    <Routes>
-      <Route
-        path="/"
-        element={<HomePage />}
-      />
+    <>
+      <Routes>
+        <Route
+          path="/"
+          element={<HomePage />}
+        />
 
-      <Route
-        path="/project/:id"
-        element={<ProjectPage />}
-      />
+        <Route
+          path="/project/:id"
+          element={<ProjectPage />}
+        />
 
-      <Route
-        path="/services/:service"
-        element={<ServicePage />}
-      />
-    </Routes>
+        <Route
+          path="/services/:service"
+          element={<ServicePage />}
+        />
+      </Routes>
+
+      <Analytics />
+    </>
   );
 }
 
